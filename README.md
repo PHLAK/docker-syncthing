@@ -6,7 +6,7 @@ Docker container for Sytncthing client/node
 
 ### Running the container
 
-docker run -d -p 80:80 -p 443:443 -p 21025:21025 -p 22000:22000 -e ST_AUTH="[USER:PASS]" -v /host/storage/path:/mnt --name Syncthing phlak/syncthing
+    docker run -d -p 80:80 -p 443:443 -p 21025:21025 -p 22000:22000 -e ST_AUTH="[USER:PASS]" -v /host/storage/path:/mnt --name Syncthing phlak/syncthing
 
 **NOTE:** Replace `[USER:PASS]` with the username:password combination you wish to use for the
 web-interface authentication, or ommit the `ST_AUTH` options alltogether for no authentication.
@@ -14,7 +14,7 @@ web-interface authentication, or ommit the `ST_AUTH` options alltogether for no 
 
 ### Upgrading Syncthing
 
-docker exec /srv/syncthing/syncthing -upgrade
+    docker exec /srv/syncthing/syncthing -upgrade
 
 **NOTE:** Requires the container to be restarted after running
 
