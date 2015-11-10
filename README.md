@@ -12,7 +12,7 @@ Docker container for Sytncthing client/node
 
 **Run the container:**
 
-    docker run -d -p 8384:8384 -p 21025:21025 -p 22000:22000 --volumes-from syncthing-data --restart=always --name syncthing phlak/syncthing
+    docker daemon -p 8384:8384 -p 21025:21025 -p 22000:22000 --volumes-from syncthing-data --restart=always --name syncthing phlak/syncthing
 
 
 ### Upgrading Syncthing
