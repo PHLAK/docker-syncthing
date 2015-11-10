@@ -20,7 +20,7 @@ Docker container for Sytncthing client/node
 To manually upgrade a running syncthing container to the latest version run the
 following then restart your container:
 
-    docker exec /srv/syncthing/syncthing -upgrade
+    docker exec /opt/syncthing/syncthing -upgrade
 
 **NOTE:** Requires the container to be restarted after running
 
