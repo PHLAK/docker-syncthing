@@ -1,0 +1,15 @@
+syncthing:
+    image: phlak/syncthing
+    ports:
+        - "8384:8384"
+        - "21025:21025"
+        - "22000:22000"
+    volumes_from:
+        - syncthing-data
+    restart: always
+
+syncthing-data:
+    image: phlak/syncthing
+    command: /bin/true
+    volumes:
+        - /srv/storage
