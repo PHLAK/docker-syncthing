@@ -3,26 +3,19 @@ docker-syncthing
 
 Docker container for Sytncthing client/node
 
+[![](https://badge.imagelayers.io/phlak/syncthing:latest.svg)](https://imagelayers.io/?images=phlak/syncthing:latest 'Get your own badge on imagelayers.io')
+
 
 ### Running the container
 
-**Create a data-only container:**
+First create a data-only container to hold the persistent data:
 
-    docker create -v /srv/storage --name syncthing-data phlak/syncthing /bin/true
+    docker create --name syncthing-data phlak/syncthing echo "Data-only container for Syncthing client"
 
-**Run the container:**
+Then run the Syncthing client:
 
-    docker daemon -p 8384:8384 -p 21025:21025 -p 22000:22000 --volumes-from syncthing-data --restart=always --name syncthing phlak/syncthing
+    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 --volumes-from syncthing-data --restart=always --name syncthing-client phlak/syncthing
 
-
-### Upgrading Syncthing
-
-To manually upgrade a running syncthing container to the latest version run the
-following then restart your container:
-
-    docker exec /opt/syncthing/syncthing -upgrade
-
-**NOTE:** Requires the container to be restarted after running
 
 -----
 
