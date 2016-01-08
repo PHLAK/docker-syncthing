@@ -14,7 +14,13 @@ First create a data-only container to hold the persistent data:
 
 Then run the Syncthing client:
 
-    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 --volumes-from syncthing-data --restart=always --name syncthing-client phlak/syncthing
+    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 --volumes-from syncthing-data --name syncthing-client phlak/syncthing
+
+
+##### Optional arguments
+
+`--restart=always` - Always restart the container regardless of the exit status. See the Docker
+                     [restart policies](https://goo.gl/OI87rA) for additional details.
 
 
 -----
