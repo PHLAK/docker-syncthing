@@ -2,7 +2,7 @@ FROM alpine:3.3
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define Syncthing version
-ENV ST_VERSION 0.12.11
+ENV ST_VERSION 0.12.12
 
 # Create Syncthing directories
 RUN mkdir -p /opt/syncthing /srv/storage
