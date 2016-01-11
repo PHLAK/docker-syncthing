@@ -4,6 +4,9 @@ MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 # Define Syncthing version
 ENV ST_VERSION 0.12.12
 
+# Disallow upgrading
+ENV STNOUPGRADE true
+
 # Create Syncthing directories
 RUN mkdir -p /opt/syncthing /srv/storage
 
