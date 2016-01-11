@@ -19,6 +19,10 @@ Then run the Syncthing client:
 
 ##### Optional arguments
 
+`-v /local/somedir:/srv/storage/somedir` - Map a directory (i.e. /local/somedir) on the host OS to
+                                           the running container.  This is useful for syncing files
+                                           on the host system through the container.
+
 `--restart=always` - Always restart the container regardless of the exit status. See the Docker
                      [restart policies](https://goo.gl/OI87rA) for additional details.
 
