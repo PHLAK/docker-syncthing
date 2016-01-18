@@ -23,13 +23,13 @@ Then run the Syncthing client:
                                            the running container.  This is useful for syncing files
                                            on the host system through the container.
 
-`--restart=always` - Always restart the container regardless of the exit status. See the Docker
+`--restart always` - Always restart the container regardless of the exit status. See the Docker
                      [restart policies](https://goo.gl/OI87rA) for additional details.
 
 
 -----
 
-**Copyright (c) 2015 Chris Kankewicz <Chris@ChrisKankiewicz.com>**
+**Copyright (c) 2016 Chris Kankewicz <Chris@ChrisKankiewicz.com>**
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
