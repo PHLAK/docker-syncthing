@@ -1,7 +1,7 @@
 docker-syncthing
 ================
 
-Docker container for Sytncthing client/node
+Docker image for Sytncthing client/node
 
 [![](https://badge.imagelayers.io/phlak/syncthing:latest.svg)](https://imagelayers.io/?images=phlak/syncthing:latest 'Get your own badge on imagelayers.io')
 
