@@ -1,27 +1,29 @@
 docker-syncthing
 ================
 
-Docker image for Sytncthing client/node
+Docker image for [Sytncthing](https://syncthing.net) client/node.
 
 [![](https://badge.imagelayers.io/phlak/syncthing:latest.svg)](https://imagelayers.io/?images=phlak/syncthing:latest 'Get your own badge on imagelayers.io')
 
 
 ### Running the container
 
-First create a data-only container to hold the persistent data:
+First create some named data volumes to hold the persistent data:
 
-    docker create --name syncthing-data phlak/syncthing echo "Data-only container for Syncthing client"
+    docker volume create --name syncthing-config
+    docker volume create --name syncthing-data
 
 Then run the Syncthing client:
 
-    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 --volumes-from syncthing-data --name syncthing-client phlak/syncthing
+    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 -v syncthing-config:/etc/syncthing -v syncthing-data:/srv/storage --name syncthing-client phlak/syncthing
 
 
 ##### Optional arguments
 
 `-v /local/somedir:/srv/storage/somedir` - Map a directory (i.e. /local/somedir) on the host OS to
                                            the running container.  This is useful for syncing files
-                                           on the host system through the container.
+                                           on the host system through the container. This replaces
+                                           the `-v syncthing-data:/srv/storage` run argument.
 
 `--restart always` - Always restart the container regardless of the exit status. See the Docker
                      [restart policies](https://goo.gl/OI87rA) for additional details.
