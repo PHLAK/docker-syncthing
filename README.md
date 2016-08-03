@@ -3,7 +3,7 @@ docker-syncthing
 
 Docker image for [Sytncthing](https://syncthing.net) client/node.
 
-[![](https://badge.imagelayers.io/phlak/syncthing:latest.svg)](https://imagelayers.io/?images=phlak/syncthing:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/phlak/syncthing.svg)](http://microbadger.com/#/images/phlak/syncthing "Get your own image badge on microbadger.com")
 
 
 ### Running the container
