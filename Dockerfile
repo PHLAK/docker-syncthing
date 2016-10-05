@@ -2,7 +2,7 @@ FROM alpine:3.4
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define Syncthing version
-ENV ST_VERSION 0.14.3
+ENV ST_VERSION 0.14.8
 
 # Disallow upgrading
 ENV STNOUPGRADE true
