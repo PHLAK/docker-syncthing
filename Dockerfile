@@ -14,7 +14,7 @@ RUN mkdir -p /opt/syncthing /srv/storage
 ENV TARBALL_URL https://github.com/syncthing/syncthing/releases/download/v${ST_VERSION}/syncthing-linux-386-v${ST_VERSION}.tar.gz
 
 # Install dependencies
-RUN apk add --update ca-certificates tar wget \
+RUN apk add --update ca-certificates tar tzdata wget \
     && wget -qO- ${TARBALL_URL} | tar -xz --strip-components=1 -C /opt/syncthing \
     && apk del ca-certificates tar wget && rm -rf /var/cache/apk/*
 
