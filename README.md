@@ -1,7 +1,7 @@
 docker-syncthing
 ================
 
-Docker image for [Sytncthing](https://syncthing.net) client/node.
+Docker image for [Syncthing](https://syncthing.net) client/node.
 
 [![](https://images.microbadger.com/badges/image/phlak/syncthing.svg)](http://microbadger.com/#/images/phlak/syncthing "Get your own image badge on microbadger.com")
 
