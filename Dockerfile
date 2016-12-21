@@ -4,7 +4,8 @@ MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 # Define Syncthing version
 ENV ST_VERSION 0.14.16
 
-# Disallow upgrading
+# Set some environment variables
+ENV STNODEFAULTFOLDER true
 ENV STNOUPGRADE true
 
 # Create Syncthing directories
