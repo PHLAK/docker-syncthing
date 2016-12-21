@@ -15,14 +15,14 @@ First create some named data volumes to hold the persistent data:
 
 Then run the Syncthing client:
 
-    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 -v syncthing-config:/etc/syncthing -v syncthing-data:/srv/storage --name syncthing-client phlak/syncthing
+    docker run -d -p 8384:8384 -p 21025:21025/udp -p 22000:22000 -v syncthing-config:/etc/syncthing -v syncthing-data:/vol/storage --name syncthing-client phlak/syncthing
 
 #### Optional arguments
 
-`-v /local/somedir:/srv/storage/somedir` - Map a directory (i.e. /local/somedir) on the host OS to
+`-v /local/somedir:/vol/storage/somedir` - Map a directory (i.e. /local/somedir) on the host OS to
                                            the running container.  This is useful for syncing files
                                            on the host system through the container. This replaces
-                                           the `-v syncthing-data:/srv/storage` run argument.
+                                           the `-v syncthing-data:/vol/storage` run argument.
 
 `-e TZ=America/Phoenix` - Set the timezone for your server. You can find your timezone in this
                           [list of timezones](https://goo.gl/uy1J6q). Use the (case sensitive)
