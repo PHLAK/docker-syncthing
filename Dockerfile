@@ -8,7 +8,7 @@ ENV ST_VERSION 0.14.16
 ENV STNOUPGRADE true
 
 # Create Syncthing directories
-RUN mkdir -p /opt/syncthing /srv/storage
+RUN mkdir -p /etc/syncthing /opt/syncthing /srv/storage
 
 # Create non-root user
 RUN adduser -DHs /sbin/nologin syncthing
@@ -20,7 +20,7 @@ ENV TARBALL_URL https://github.com/syncthing/syncthing/releases/download/v${ST_V
 RUN apk add --update ca-certificates tar tzdata wget \
     && wget -qO- ${TARBALL_URL} | tar -xz --strip-components=1 -C /opt/syncthing \
     && apk del ca-certificates tar wget && rm -rf /var/cache/apk/* \
-    && chown -R syncthing:syncthing /etc/syncthing /opt/syncthing
+    && chown -R syncthing:syncthing /etc/syncthing /opt/syncthing /srv/storage
 
 # Expose ports
 EXPOSE 8384 21025/udp 22000
