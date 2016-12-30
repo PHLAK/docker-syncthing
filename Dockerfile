@@ -2,7 +2,7 @@ FROM alpine:3.5
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define Syncthing version
-ENV ST_VERSION 0.14.17
+ARG ST_VERSION=0.14.17
 
 # Set some environment variables
 ENV STNODEFAULTFOLDER true
@@ -15,7 +15,7 @@ RUN mkdir -p /etc/syncthing /opt/syncthing /vol/storage
 RUN adduser -DHs /sbin/nologin syncthing
 
 # Set tarball file URL
-ENV TARBALL_URL https://github.com/syncthing/syncthing/releases/download/v${ST_VERSION}/syncthing-linux-386-v${ST_VERSION}.tar.gz
+ARG TARBALL_URL=https://github.com/syncthing/syncthing/releases/download/v${ST_VERSION}/syncthing-linux-386-v${ST_VERSION}.tar.gz
 
 # Install dependencies
 RUN apk add --update ca-certificates tar tzdata wget \
