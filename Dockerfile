@@ -2,7 +2,7 @@ FROM alpine:3.5
 MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
 
 # Define Syncthing version
-ARG ST_VERSION=0.14.24
+ARG ST_VERSION=0.14.25
 
 # Set some environment variables
 ENV STNODEFAULTFOLDER true
