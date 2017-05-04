@@ -24,7 +24,7 @@ RUN apk add --update ca-certificates tar tzdata wget \
     && chown -R syncthing:syncthing /etc/syncthing /opt/syncthing /vol/storage
 
 # Expose ports
-EXPOSE 8384 21025/udp 22000
+EXPOSE 8384 22000 21027/udp
 
 # Set running user
 USER syncthing
