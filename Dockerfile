@@ -23,6 +23,9 @@ RUN apk add --update ca-certificates tar tzdata wget \
     && apk del ca-certificates tar wget && rm -rf /var/cache/apk/* \
     && chown -R syncthing:syncthing /etc/syncthing /opt/syncthing /vol/storage
 
+# Create symlink to binary in the $PATH
+RUN ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
+
 # Expose ports
 EXPOSE 8384 22000 21027/udp
 
@@ -32,5 +35,8 @@ USER syncthing
 # Create volumes
 VOLUME /etc/syncthing /vol/storage
 
+# Set the working dir
+WORKDIR /opt/syncthing
+
 # Set command
-CMD ["/opt/syncthing/syncthing", "-gui-address=0.0.0.0:8384", "-home=/etc/syncthing", "-no-browser"]
+CMD ["syncthing", "-gui-address=0.0.0.0:8384", "-home=/etc/syncthing", "-no-browser"]
