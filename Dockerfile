@@ -1,5 +1,5 @@
 FROM alpine:3.9
-MAINTAINER Chris Kankiewicz <Chris@ChrisKankiewicz.com>
+LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define Syncthing version
 ARG ST_VERSION=1.1.3
