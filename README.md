@@ -1,15 +1,23 @@
 docker-syncthing
 ================
 
-Docker image for [Syncthing](https://syncthing.net) client/node.
+<p align="center">
+    <img src="docker-syncthing.png" alt="Docker Syncthing" width="500">
+<p>
 
-[![](https://images.microbadger.com/badges/image/phlak/syncthing.svg)](http://microbadger.com/#/images/phlak/syncthing "Get your own image badge on microbadger.com")
+<p align="center">
+  <a href="http://microbadger.com/#/images/phlak/syncthing" alt="Microbadger"><img src="https://images.microbadger.com/badges/image/phlak/syncthing.svg"></a>
+  <a href="https://join.slack.com/t/phlaknet/shared_invite/enQtNzk0ODkwMDA2MDg0LWI4NDAyZGRlMWEyMWNhZmJmZjgzM2Y2YTdhNmZlYzc3OGNjZWU5MDNkMTcwMWQ5OGI5ODFmMjI5OWVkZTliN2M"><img src="https://img.shields.io/badge/Join_our-Slack-611f69.svg" alt="Join our"></a>
+  <a href="https://github.com/users/PHLAK/sponsorship"><img src="https://img.shields.io/badge/Become_a-Sponsor-cc4195.svg" alt="Become a Sponsor"></a>
+  <a href="https://patreon.com/PHLAK"><img src="https://img.shields.io/badge/Become_a-Patron-e7513b.svg" alt="Become a Patron"></a>
+  <a href="https://paypal.me/ChrisKankiewicz"><img src="https://img.shields.io/badge/Make_a-Donation-006bb6.svg" alt="One-time Donation"></a>
+</p>
 
-#### Like this project?
+<p align="center">
+    Docker image for <a href="https://syncthing.net">Syncthing</a> client/node.
+</p>
 
-[![Join the community on Spectrum](https://img.shields.io/badge/Join_the_community-PHLAKNET-7a15fe.svg)](https://spectrum.chat/phlaknet)
-[![Become a Patron](https://img.shields.io/badge/Become_a-Patron-f96854.svg)](https://patreon.com/PHLAK)
-[![One-time Donation](https://img.shields.io/badge/Make_a-Donation-006bb6.svg)](https://paypal.me/ChrisKankiewicz)
+---
 
 Running the Container
 ---------------------
@@ -42,7 +50,7 @@ Then run the Syncthing client:
 Troubleshooting
 ---------------
 
-For general help and support join our [Spectrum community](https://spectrum.chat/phlaknet).
+For general help and support join our [Slack Workspace](https://join.slack.com/t/phlaknet/shared_invite/enQtNzk0ODkwMDA2MDg0LWI4NDAyZGRlMWEyMWNhZmJmZjgzM2Y2YTdhNmZlYzc3OGNjZWU5MDNkMTcwMWQ5OGI5ODFmMjI5OWVkZTliN2M).
 
 Please report bugs to the [GitHub Issue Tracker](https://github.com/PHLAK/docker-syncthing/issues).
 
