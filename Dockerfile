@@ -2,7 +2,7 @@ FROM alpine:3.10
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define Syncthing version
-ARG ST_VERSION=1.3.0
+ARG ST_VERSION=1.3.1
 
 # Set some environment variables
 ENV STNODEFAULTFOLDER true
