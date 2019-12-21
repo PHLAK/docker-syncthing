@@ -1,4 +1,5 @@
 .git
-build.sh
+docker-syncthing.png
 LICENSE
+Makefile
 README.md
