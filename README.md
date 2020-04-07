@@ -34,7 +34,7 @@ Then run the Syncthing client:
 
 <dl>
     <dt><code>-v /local/somedir:/vol/storage/somedir</code></dt>
-    <dd>Map a directory (i.e. /local/somedir) on the host OS to the running container.  This is useful for syncing files on the host system through the container. This replaces the `-v syncthing-data:/vol/storage` run argument.</dd>
+    <dd>Map a directory (i.e. /local/somedir) on the host OS to the running container.  This is useful for syncing files on the host system through the container. This replaces the <code>-v syncthing-data:/vol/storage</code> run argument.</dd>
 </dl>
 
 <dl>
