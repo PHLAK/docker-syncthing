@@ -37,18 +37,14 @@ Then run the Syncthing client:
 #### Optional arguments
 
 <dl>
-    <dt><code>-v /local/somedir:/vol/storage/somedir</code></dt>
-    <dd>Map a directory (i.e. /local/somedir) on the host OS to the running container.  This is useful for syncing files on the host system through the container. This replaces the <code>-v syncthing-data:/vol/storage</code> run argument.</dd>
-</dl>
+  <dt><code>-v /local/somedir:/vol/storage/somedir</code></dt>
+  <dd>Map a directory (i.e. <code>/local/somedir</code>) on the host OS to the running container.  This is useful for syncing files on the host system through the container. This replaces the <code>-v syncthing-data:/vol/storage</code> run argument.</dd>
 
-<dl>
-    <dt><code>-e TZ=America/Phoenix</code></dt>
-    <dd>Set the timezone for your server. You can find your timezone in this <a href="https://goo.gl/uy1J6q">list of timezones</a>. Use the (case sensitive) value from the <code>TZ</code> column. If left unset, timezone will be UTC.</dd>
-</dl>
+  <dt><code>-e TZ=America/Phoenix</code></dt>
+  <dd>Set the timezone for your server. You can find your timezone in this <a href="https://goo.gl/uy1J6q">list of timezones</a>. Use the (case sensitive) value from the <code>TZ</code> column. If left unset, timezone will be UTC.</dd>
 
-<dl>
-    <dt><code>--restart unless-stopped</code></dt>
-    <dd>Always restart the container regardless of the exit status, but do not start it on daemon startup if the container has been put to a stopped state before. See the Docker <a href="https://goo.gl/Y0dlDH">restart policies</a> for additional details.</dd>
+  <dt><code>--restart unless-stopped</code></dt>
+  <dd>Always restart the container regardless of the exit status, but do not start it on daemon startup if the container has been put to a stopped state before. See the Docker <a href="https://goo.gl/Y0dlDH">restart policies</a> for additional details.</dd>
 </dl>
 
 Troubleshooting
