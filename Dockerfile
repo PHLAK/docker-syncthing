@@ -2,11 +2,17 @@ FROM alpine:3.12.0
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define Syncthing version
-ARG ST_VERSION=1.6.1
+ARG ST_VERSION=1.7.0
 
 # Set some environment variables
 ENV STNODEFAULTFOLDER true
 ENV STNOUPGRADE true
+
+# Expose ports
+EXPOSE 8384 22000 21027/udp
+
+# Create volumes
+VOLUME /etc/syncthing /vol/storage
 
 # Create Syncthing directories
 RUN mkdir -p /etc/syncthing /opt/syncthing /vol/storage
@@ -26,14 +32,8 @@ RUN apk add --update ca-certificates tar tzdata wget \
 # Create symlink to binary in the $PATH
 RUN ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
 
-# Expose ports
-EXPOSE 8384 22000 21027/udp
-
 # Set running user
 USER syncthing
-
-# Create volumes
-VOLUME /etc/syncthing /vol/storage
 
 # Set the working dir
 WORKDIR /opt/syncthing
