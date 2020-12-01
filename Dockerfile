@@ -11,9 +11,6 @@ ENV STNOUPGRADE true
 # Expose ports
 EXPOSE 8384 22000 21027/udp
 
-# Create volumes
-VOLUME /etc/syncthing /vol/storage
-
 # Create Syncthing directories
 RUN mkdir -p /etc/syncthing /opt/syncthing /vol/storage
 
@@ -34,6 +31,9 @@ RUN ln -s /opt/syncthing/syncthing /usr/local/bin/syncthing
 
 # Set running user
 USER syncthing
+
+# Create volumes
+VOLUME /etc/syncthing /vol/storage
 
 # Set the working dir
 WORKDIR /opt/syncthing
