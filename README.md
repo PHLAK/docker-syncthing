@@ -13,7 +13,7 @@ docker-syncthing
     <a href="https://hub.docker.com/repository/docker/phlak/syncthing/tags"><img alt="Docker Image Version" src="https://img.shields.io/docker/v/phlak/syncthing?style=flat-square&sort=semver"></a>
     <a href="https://hub.docker.com/repository/docker/phlak/syncthing"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/phlak/syncthing?style=flat-square"></a>
     <a href="https://github.com/PHLAK/docker-syncthing/blob/master/LICENSE"><img src="https://img.shields.io/github/license/PHLAK/docker-syncthing?style=flat-square" alt="License"></a>
-    <a href="https://hub.docker.com/repository/docker/phlak/syncthing/builds"><img alt="Docker Build Status" src="https://img.shields.io/docker/build/phlak/syncthing?style=flat-square"></a>
+    <a href="https://hub.docker.com/repository/docker/phlak/syncthing/builds"><img alt="Docker Cloud Build Status" src="https://img.shields.io/docker/cloud/build/phlak/syncthing?style=flat-square"></a>
 </p>
 
 <p align="center">
@@ -50,7 +50,7 @@ Then run the Syncthing client:
 Troubleshooting
 ---------------
 
-For general help and support join our [Spectrum Community](https://spectrum.chat/phlaknet) or reach out on [Twitter](https://twitter.com/PHLAK).
+For general help and support join our [GitHub Discussions](https://github.com/PHLAK/docker-syncthing/discussions) or reach out on [Twitter](https://twitter.com/PHLAK).
 
 Please report bugs to the [GitHub Issue Tracker](https://github.com/PHLAK/docker-syncthing/issues).
 
