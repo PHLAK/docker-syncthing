@@ -1,0 +1,32 @@
+name: Publish Image
+
+on:
+  push:
+    branches: ['master']
+    tags: ['*']
+
+jobs:
+  build-container:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_TOKEN }}
+
+      - name: Extract Metadata
+        id: extract-metadata
+        uses: docker/metadata-action@v3
+        with:
+          images: phlak/syncthing
+
+      - name: Build & Push Image
+        uses: docker/build-push-action@v2
+        with:
+          tags: ${{ steps.extract-metadata.outputs.tags }}
+          labels: ${{ steps.extract-metadata.outputs.labels }}
