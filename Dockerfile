@@ -1,4 +1,4 @@
-FROM alpine:3.14
+FROM alpine:3.14.1
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 # Define Syncthing version
