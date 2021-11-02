@@ -4,6 +4,7 @@ on:
   push:
     branches: ['master']
     tags: ['*']
+  workflow_dispatch:
 
 env:
   DOCKER_HUB_USER: phlak
