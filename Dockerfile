@@ -3,7 +3,9 @@ LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
 ARG ST_VERSION=1.23.7
 
+ENV STGUIADDRESS 0.0.0.0:8384
 ENV STNODEFAULTFOLDER true
+ENV STNORESTART true
 ENV STNOUPGRADE true
 
 EXPOSE 8384 22000 21027/udp
@@ -22,4 +24,4 @@ USER syncthing
 
 VOLUME /etc/syncthing /vol/storage
 
-CMD ["syncthing", "-gui-address=0.0.0.0:8384", "-home=/etc/syncthing", "-no-browser"]
+CMD ["syncthing", "--home=/etc/syncthing", "--no-browser", "--verbose"]
